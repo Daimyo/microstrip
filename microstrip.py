@@ -22,7 +22,6 @@
 
 import numpy as np
 import scipy.constants as cst
-from scipy.special import ellipk
 
 class microstrip:
     
@@ -499,19 +498,6 @@ class microstrip:
         '''
         
         return 1./np.sqrt(self.get_capacitance_per_unit_length(f0)*self.get_inductance_per_unit_length(f0))/4./f0
-
-#    def test(self, s):
-#        
-#        k  = self._w/(self._w + 2.*s)
-#        kk = np.sqrt( 1 - k**2.)
-#        
-#        A = 1./2./k**2./ellipk(k)**2.
-#        B = np.log(self._t/4./self._w)
-#        C = (self._w/(self._w + 2.*s))*np.log(self._t/4./(self._w + 2.*s))
-#        D =  (2.*(self._w + s)/(self._w + 2.*s))*np.log(s/(self._w + s))
-#        
-#        print A, (-B - C + D)
-#        return A*(-B - C + D)
 
 
 
