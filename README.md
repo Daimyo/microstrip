@@ -10,7 +10,7 @@ Example:
 
 `````python
 
-import microstrip as microstrip
+import microstrip
 
 line = microstrip.microstrip()
 
